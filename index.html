@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATHFARM | Productos de Limpieza</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="hero">
+    <img src="imagenes/hero.jpg" alt="Productos de Limpieza MATHFARM" class="hero-img">
+    <div class="hero-texto">
+        <h1>MATHFARM</h1>
+        <p>Soluciones Profesionales en Limpieza Industrial en Perú</p>
+        <button onclick="window.scrollTo({top: document.querySelector('.productos').offsetTop, behavior: 'smooth'})">
+            Ver Productos
+        </button>
+    </div>
+</section>
+
+<header>
+    <h1>MATHFARM 🧼</h1>
+    <div class="carrito">
+        🛒 (<span id="contador">0</span>)
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Soluciones Profesionales en Limpieza Industrial</h2>
+    <p>Atendemos hogares, restaurantes, empresas y distribuidores en todo el Perú.</p>
+    <button onclick="enviarWhatsApp()">Solicitar Cotización</button>
+</section>
+<section style="padding:60px; text-align:center;">
+    <h2>¿A Quién Atendemos?</h2>
+    <div style="margin-top:30px;">
+        <p><strong>🏠 Hogares:</strong> Productos de limpieza de alta calidad.</p>
+        <p><strong>🍽 Restaurantes:</strong> Desinfección profesional certificada.</p>
+        <p><strong>🏢 Empresas:</strong> Abastecimiento mensual industrial.</p>
+        <p><strong>🚚 Distribuidores:</strong> Precios mayoristas y volumen.</p>
+    </div>
+</section>
+<section class="productos">
+
+<section class="checkout">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista"></ul>
+    <p>Total: S/ <span id="total">0</span></p>
+</section>
+
+<div class="producto">
+    <img src="imagenes/suavizante.jpg" alt="Suavizante Para Ropa">
+    <h3>Suavizante 1L</h3>
+    <p class="precio">S/ 8.00</p>
+
+    <div class="cantidad-control">
+        <button onclick="cambiarCantidad(this, -1)">−</button>
+        <span class="cantidad">1</span>
+        <button onclick="cambiarCantidad(this, 1)">+</button>
+    </div>
+
+    <button onclick="agregarConCantidad(this, 'Suavizante 1L', 8)">
+        Agregar al carrito
+    </button>
+</div>
+
+<div class="producto">
+    <img src="imagenes/aromatizador.jpg" alt="Aromatizador 500ml">
+    <h3>Aromatizador 500ml</h3>
+    <p class="precio">S/ 5.00</p>
+
+    <div class="cantidad-control">
+        <button onclick="cambiarCantidad(this, -1)">−</button>
+        <span class="cantidad">1</span>
+        <button onclick="cambiarCantidad(this, 1)">+</button>
+    </div>
+
+    <button onclick="agregarConCantidad(this, 'Jabón Antibacterial 5L', 20)">
+        Agregar al carrito
+    </button>
+</div>
+
+    <div class="producto">
+        <img src="imagenes/lejia.jpg" alt="Lejia Tradicional">
+        <h3>Lejia Tradicional 1L</h3>
+        <p class="precio">S/ 2.50</p>
+        <div class="cantidad-control">
+        <button onclick="cambiarCantidad(this, -1)">−</button>
+        <span class="cantidad">1</span>
+        <button onclick="cambiarCantidad(this, 1)">+</button>
+    </div>
+
+    <button onclick="agregarConCantidad(this, 'Lejia Tradicional 1L', 2.50)">
+        Agregar al carrito
+    </button>
+</div>
+
+    <div class="producto">
+        <img src="imagenes/shampooparaperros.jpg" alt="Shampoo Para Perros">
+        <h3>Shampoo para perros 1L</h3>
+        <p class="precio">S/ 18.00</p>
+        <div class="cantidad-control">
+        <button onclick="cambiarCantidad(this, -1)">−</button>
+        <span class="cantidad">1</span>
+        <button onclick="cambiarCantidad(this, 1)">+</button>
+    </div>
+
+    <button onclick="agregarConCantidad(this, ´Shampoo Para Perros 1L', 18.00)">
+        Agregar al carrito
+    </button>
+</div>
+
+    <div class="producto">
+        <img src="imagenes/lavavajilla.jpg" alt="Lavavajilla">
+        <h3>Lavavajilla 900ml</h3>
+        <p class="precio">S/ 6.50</p>
+        <div class="cantidad-control">
+        <button onclick="cambiarCantidad(this, -1)">−</button>
+        <span class="cantidad">1</span>
+        <button onclick="cambiarCantidad(this, 1)">+</button>
+    </div>
+
+    <button onclick="agregarConCantidad(this, 'Lavavajilla 900ml', 6.50)">
+        Agregar al carrito
+    </button>
+</div>
+
+    <div class="producto">
+        <img src="imagenes/limpiazapatillas.jpg" alt="Limpiazapatillas">
+        <h3>Limpiazapatillas 200ml</h3>
+        <p class="precio">S/ 10.00</p>
+        <div class="cantidad-control">
+        <button onclick="cambiarCantidad(this, -1)">−</button>
+        <span class="cantidad">1</span>
+        <button onclick="cambiarCantidad(this, 1)">+</button>
+    </div>
+
+    <button onclick="agregarConCantidad(this, '	Limpiazapatillas 200ml', 10.00)">
+        Agregar al carrito
+    </button>
+</div>
+
+</section><section class="sobre">
+    <div style="padding:50px; text-align:center;">
+        <h2>Sobre MATHFARM</h2>
+        <p>
+        Somos proveedores de productos de limpieza industrial en Perú.
+        Abastecemos hogares, restaurantes, colegios y empresas
+        con estándares de calidad profesional.
+        </p>
+    </div>
+</section>
+<section class="checkout">
+    <h2>Resumen de Compra</h2>
+    <ul id="lista"></ul>
+    <h3>Total: S/ <span id="total">0</span></h3>
+    <button onclick="enviarWhatsApp()">Comprar por WhatsApp</button>
+</section>
+
+<script src="script.js"></script>
+<footer>
+    © 2026 MATHFARM | Productos de Limpieza Industrial | Perú
+<section style="padding:50px; text-align:center;">
+    <h2>Clientes Empresariales</h2>
+    <p>Abastecemos restaurantes, colegios, hoteles y empresas en todo el Perú.</p>
+</section>
+<section style="background:#0f172a; color:white; padding:60px; text-align:center;">
+    <h2>Venta Mayorista</h2>
+    <p>Descuentos automáticos desde 10 unidades.</p>
+    <p>Precios especiales para compras por volumen.</p>
+    <button onclick="enviarWhatsApp()">Cotizar Mayorista</button>
+</section><section style="padding:60px; text-align:center;">
+    <h2>Compromiso MATHFARM</h2>
+    <p>
+    Garantizamos productos de limpieza industrial con altos estándares
+    de calidad, seguridad y efectividad.
+    </p>
+</section>
+</footer>
+<a href="https://wa.me/51970666536" class="whatsapp" target="_blank">
+    💬
+</a>
+</body>
+</html>
